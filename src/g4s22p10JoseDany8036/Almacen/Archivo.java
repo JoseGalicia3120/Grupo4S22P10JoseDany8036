@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package g4s22p10aggr.Almacen;
+package g4s22p10JoseDany8036.Almacen;
 
-import g4s22p10aggr.informacion.Datos;
+import g4s22p10JoseDany8036.informacion.Datos;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -35,14 +35,15 @@ public class Archivo {
     }
     public List<Datos> leer (){
         List<Datos> Listadatos = new ArrayList<>();
-        Datos datos = new Datos();
+        Datos datos;
         String cadena="";
         try{
             FileReader archivo = new FileReader("datos.txt");
             BufferedReader br = new BufferedReader(archivo);
-            while ((cadena = br readLine()) != null){
+            while ((cadena = br .readLine()) != null){
+            datos = new Datos();
             datos.setNombre(cadena);
-            cadena = br . readLine();
+            cadena = br .readLine();
             datos.setEdad(Integer.parseInt(cadena));
             Listadatos.add(datos);
             
